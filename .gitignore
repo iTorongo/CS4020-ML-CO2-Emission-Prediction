@@ -1,3 +1,6 @@
 venv/
 .ipynb_checkpoints/
-Data/
+Dataset/
+co2_emission_rf.pkl
+app/__pycache__
+app/api/__pycache__

@@ -1,0 +1,802 @@
+[
+    {
+        "id": 1,
+        "code": "AGO",
+        "name": "Angola"
+    },
+    {
+        "id": 2,
+        "code": "ALB",
+        "name": "Albania"
+    },
+    {
+        "id": 3,
+        "code": "ARB",
+        "name": "Arab World"
+    },
+    {
+        "id": 4,
+        "code": "ARG",
+        "name": "Argentina"
+    },
+    {
+        "id": 5,
+        "code": "AUS",
+        "name": "Australia"
+    },
+    {
+        "id": 6,
+        "code": "AUT",
+        "name": "Austria"
+    },
+    {
+        "id": 7,
+        "code": "BEL",
+        "name": "Belgium"
+    },
+    {
+        "id": 8,
+        "code": "BEN",
+        "name": "Benin"
+    },
+    {
+        "id": 9,
+        "code": "BGD",
+        "name": "Bangladesh"
+    },
+    {
+        "id": 10,
+        "code": "BGR",
+        "name": "Bulgaria"
+    },
+    {
+        "id": 11,
+        "code": "BHR",
+        "name": "Bahrain"
+    },
+    {
+        "id": 12,
+        "code": "BOL",
+        "name": "Bolivia"
+    },
+    {
+        "id": 13,
+        "code": "BRA",
+        "name": "Brazil"
+    },
+    {
+        "id": 14,
+        "code": "BWA",
+        "name": "Botswana"
+    },
+    {
+        "id": 15,
+        "code": "CAN",
+        "name": "Canada"
+    },
+    {
+        "id": 16,
+        "code": "CEB",
+        "name": "Central Europe and the Baltics"
+    },
+    {
+        "id": 17,
+        "code": "CHE",
+        "name": "Switzerland"
+    },
+    {
+        "id": 18,
+        "code": "CHL",
+        "name": "Chile"
+    },
+    {
+        "id": 19,
+        "code": "CHN",
+        "name": "China"
+    },
+    {
+        "id": 20,
+        "code": "CIV",
+        "name": "Cote d'Ivoire"
+    },
+    {
+        "id": 21,
+        "code": "CMR",
+        "name": "Cameroon"
+    },
+    {
+        "id": 22,
+        "code": "COD",
+        "name": "Congo, Dem. Rep."
+    },
+    {
+        "id": 23,
+        "code": "COG",
+        "name": "Congo, Rep."
+    },
+    {
+        "id": 24,
+        "code": "COL",
+        "name": "Colombia"
+    },
+    {
+        "id": 25,
+        "code": "CRI",
+        "name": "Costa Rica"
+    },
+    {
+        "id": 26,
+        "code": "CSS",
+        "name": "Caribbean small states"
+    },
+    {
+        "id": 27,
+        "code": "CUB",
+        "name": "Cuba"
+    },
+    {
+        "id": 28,
+        "code": "CYP",
+        "name": "Cyprus"
+    },
+    {
+        "id": 29,
+        "code": "CZE",
+        "name": "Czech Republic"
+    },
+    {
+        "id": 30,
+        "code": "DEU",
+        "name": "Germany"
+    },
+    {
+        "id": 31,
+        "code": "DNK",
+        "name": "Denmark"
+    },
+    {
+        "id": 32,
+        "code": "DOM",
+        "name": "Dominican Republic"
+    },
+    {
+        "id": 33,
+        "code": "DZA",
+        "name": "Algeria"
+    },
+    {
+        "id": 34,
+        "code": "EAP",
+        "name": "East Asia & Pacific (excluding high income)"
+    },
+    {
+        "id": 35,
+        "code": "EAR",
+        "name": "Early-demographic dividend"
+    },
+    {
+        "id": 36,
+        "code": "EAS",
+        "name": "East Asia & Pacific"
+    },
+    {
+        "id": 37,
+        "code": "ECA",
+        "name": "Europe & Central Asia (excluding high income)"
+    },
+    {
+        "id": 38,
+        "code": "ECS",
+        "name": "Europe & Central Asia"
+    },
+    {
+        "id": 39,
+        "code": "ECU",
+        "name": "Ecuador"
+    },
+    {
+        "id": 40,
+        "code": "EGY",
+        "name": "Egypt, Arab Rep."
+    },
+    {
+        "id": 41,
+        "code": "EMU",
+        "name": "Euro area"
+    },
+    {
+        "id": 42,
+        "code": "ESP",
+        "name": "Spain"
+    },
+    {
+        "id": 43,
+        "code": "ETH",
+        "name": "Ethiopia"
+    },
+    {
+        "id": 44,
+        "code": "EUU",
+        "name": "European Union"
+    },
+    {
+        "id": 45,
+        "code": "FCS",
+        "name": "Fragile and conflict affected situations"
+    },
+    {
+        "id": 46,
+        "code": "FIN",
+        "name": "Finland"
+    },
+    {
+        "id": 47,
+        "code": "FRA",
+        "name": "France"
+    },
+    {
+        "id": 48,
+        "code": "GAB",
+        "name": "Gabon"
+    },
+    {
+        "id": 49,
+        "code": "GBR",
+        "name": "United Kingdom"
+    },
+    {
+        "id": 50,
+        "code": "GEO",
+        "name": "Georgia"
+    },
+    {
+        "id": 51,
+        "code": "GHA",
+        "name": "Ghana"
+    },
+    {
+        "id": 52,
+        "code": "GIB",
+        "name": "Gibraltar"
+    },
+    {
+        "id": 53,
+        "code": "GRC",
+        "name": "Greece"
+    },
+    {
+        "id": 54,
+        "code": "GTM",
+        "name": "Guatemala"
+    },
+    {
+        "id": 55,
+        "code": "HIC",
+        "name": "High income"
+    },
+    {
+        "id": 56,
+        "code": "HKG",
+        "name": "Hong Kong SAR, China"
+    },
+    {
+        "id": 57,
+        "code": "HND",
+        "name": "Honduras"
+    },
+    {
+        "id": 58,
+        "code": "HPC",
+        "name": "Heavily indebted poor countries (HIPC)"
+    },
+    {
+        "id": 59,
+        "code": "HTI",
+        "name": "Haiti"
+    },
+    {
+        "id": 60,
+        "code": "HUN",
+        "name": "Hungary"
+    },
+    {
+        "id": 61,
+        "code": "IBD",
+        "name": "IBRD only"
+    },
+    {
+        "id": 62,
+        "code": "IBT",
+        "name": "IDA & IBRD total"
+    },
+    {
+        "id": 63,
+        "code": "IDA",
+        "name": "IDA total"
+    },
+    {
+        "id": 64,
+        "code": "IDB",
+        "name": "IDA blend"
+    },
+    {
+        "id": 65,
+        "code": "IDN",
+        "name": "Indonesia"
+    },
+    {
+        "id": 66,
+        "code": "IDX",
+        "name": "IDA only"
+    },
+    {
+        "id": 67,
+        "code": "IND",
+        "name": "India"
+    },
+    {
+        "id": 68,
+        "code": "IRL",
+        "name": "Ireland"
+    },
+    {
+        "id": 69,
+        "code": "IRN",
+        "name": "Iran, Islamic Rep."
+    },
+    {
+        "id": 70,
+        "code": "IRQ",
+        "name": "Iraq"
+    },
+    {
+        "id": 71,
+        "code": "ISL",
+        "name": "Iceland"
+    },
+    {
+        "id": 72,
+        "code": "ISR",
+        "name": "Israel"
+    },
+    {
+        "id": 73,
+        "code": "ITA",
+        "name": "Italy"
+    },
+    {
+        "id": 74,
+        "code": "JAM",
+        "name": "Jamaica"
+    },
+    {
+        "id": 75,
+        "code": "JOR",
+        "name": "Jordan"
+    },
+    {
+        "id": 76,
+        "code": "JPN",
+        "name": "Japan"
+    },
+    {
+        "id": 77,
+        "code": "KEN",
+        "name": "Kenya"
+    },
+    {
+        "id": 78,
+        "code": "KHM",
+        "name": "Cambodia"
+    },
+    {
+        "id": 79,
+        "code": "KOR",
+        "name": "Korea, Rep."
+    },
+    {
+        "id": 80,
+        "code": "KWT",
+        "name": "Kuwait"
+    },
+    {
+        "id": 81,
+        "code": "LAC",
+        "name": "Latin America & Caribbean (excluding high income)"
+    },
+    {
+        "id": 82,
+        "code": "LBN",
+        "name": "Lebanon"
+    },
+    {
+        "id": 83,
+        "code": "LBY",
+        "name": "Libya"
+    },
+    {
+        "id": 84,
+        "code": "LCN",
+        "name": "Latin America & Caribbean"
+    },
+    {
+        "id": 85,
+        "code": "LDC",
+        "name": "Least developed countries: UN classification"
+    },
+    {
+        "id": 86,
+        "code": "LIC",
+        "name": "Low income"
+    },
+    {
+        "id": 87,
+        "code": "LKA",
+        "name": "Sri Lanka"
+    },
+    {
+        "id": 88,
+        "code": "LMC",
+        "name": "Lower middle income"
+    },
+    {
+        "id": 89,
+        "code": "LMY",
+        "name": "Low & middle income"
+    },
+    {
+        "id": 90,
+        "code": "LTE",
+        "name": "Late-demographic dividend"
+    },
+    {
+        "id": 91,
+        "code": "LUX",
+        "name": "Luxembourg"
+    },
+    {
+        "id": 92,
+        "code": "MAR",
+        "name": "Morocco"
+    },
+    {
+        "id": 93,
+        "code": "MEA",
+        "name": "Middle East & North Africa"
+    },
+    {
+        "id": 94,
+        "code": "MEX",
+        "name": "Mexico"
+    },
+    {
+        "id": 95,
+        "code": "MIC",
+        "name": "Middle income"
+    },
+    {
+        "id": 96,
+        "code": "MLT",
+        "name": "Malta"
+    },
+    {
+        "id": 97,
+        "code": "MMR",
+        "name": "Myanmar"
+    },
+    {
+        "id": 98,
+        "code": "MNA",
+        "name": "Middle East & North Africa (excluding high income)"
+    },
+    {
+        "id": 99,
+        "code": "MNG",
+        "name": "Mongolia"
+    },
+    {
+        "id": 100,
+        "code": "MOZ",
+        "name": "Mozambique"
+    },
+    {
+        "id": 101,
+        "code": "MUS",
+        "name": "Mauritius"
+    },
+    {
+        "id": 102,
+        "code": "MYS",
+        "name": "Malaysia"
+    },
+    {
+        "id": 103,
+        "code": "NAC",
+        "name": "North America"
+    },
+    {
+        "id": 104,
+        "code": "NER",
+        "name": "Niger"
+    },
+    {
+        "id": 105,
+        "code": "NGA",
+        "name": "Nigeria"
+    },
+    {
+        "id": 106,
+        "code": "NIC",
+        "name": "Nicaragua"
+    },
+    {
+        "id": 107,
+        "code": "NLD",
+        "name": "Netherlands"
+    },
+    {
+        "id": 108,
+        "code": "NOR",
+        "name": "Norway"
+    },
+    {
+        "id": 109,
+        "code": "NPL",
+        "name": "Nepal"
+    },
+    {
+        "id": 110,
+        "code": "NZL",
+        "name": "New Zealand"
+    },
+    {
+        "id": 111,
+        "code": "OED",
+        "name": "OECD members"
+    },
+    {
+        "id": 112,
+        "code": "OMN",
+        "name": "Oman"
+    },
+    {
+        "id": 113,
+        "code": "OSS",
+        "name": "Other small states"
+    },
+    {
+        "id": 114,
+        "code": "PAK",
+        "name": "Pakistan"
+    },
+    {
+        "id": 115,
+        "code": "PAN",
+        "name": "Panama"
+    },
+    {
+        "id": 116,
+        "code": "PER",
+        "name": "Peru"
+    },
+    {
+        "id": 117,
+        "code": "PHL",
+        "name": "Philippines"
+    },
+    {
+        "id": 118,
+        "code": "POL",
+        "name": "Poland"
+    },
+    {
+        "id": 119,
+        "code": "PRE",
+        "name": "Pre-demographic dividend"
+    },
+    {
+        "id": 120,
+        "code": "PRK",
+        "name": "Korea, Dem. People’s Rep."
+    },
+    {
+        "id": 121,
+        "code": "PRT",
+        "name": "Portugal"
+    },
+    {
+        "id": 122,
+        "code": "PRY",
+        "name": "Paraguay"
+    },
+    {
+        "id": 123,
+        "code": "PST",
+        "name": "Post-demographic dividend"
+    },
+    {
+        "id": 124,
+        "code": "ROU",
+        "name": "Romania"
+    },
+    {
+        "id": 125,
+        "code": "RUS",
+        "name": "Russian Federation"
+    },
+    {
+        "id": 126,
+        "code": "SAS",
+        "name": "South Asia"
+    },
+    {
+        "id": 127,
+        "code": "SAU",
+        "name": "Saudi Arabia"
+    },
+    {
+        "id": 128,
+        "code": "SDN",
+        "name": "Sudan"
+    },
+    {
+        "id": 129,
+        "code": "SEN",
+        "name": "Senegal"
+    },
+    {
+        "id": 130,
+        "code": "SGP",
+        "name": "Singapore"
+    },
+    {
+        "id": 131,
+        "code": "SLV",
+        "name": "El Salvador"
+    },
+    {
+        "id": 132,
+        "code": "SSA",
+        "name": "Sub-Saharan Africa (excluding high income)"
+    },
+    {
+        "id": 133,
+        "code": "SSF",
+        "name": "Sub-Saharan Africa"
+    },
+    {
+        "id": 134,
+        "code": "SST",
+        "name": "Small states"
+    },
+    {
+        "id": 135,
+        "code": "SUR",
+        "name": "Suriname"
+    },
+    {
+        "id": 136,
+        "code": "SVK",
+        "name": "Slovak Republic"
+    },
+    {
+        "id": 137,
+        "code": "SWE",
+        "name": "Sweden"
+    },
+    {
+        "id": 138,
+        "code": "SYR",
+        "name": "Syrian Arab Republic"
+    },
+    {
+        "id": 139,
+        "code": "TEA",
+        "name": "East Asia & Pacific (IDA & IBRD countries)"
+    },
+    {
+        "id": 140,
+        "code": "TEC",
+        "name": "Europe & Central Asia (IDA & IBRD countries)"
+    },
+    {
+        "id": 141,
+        "code": "TGO",
+        "name": "Togo"
+    },
+    {
+        "id": 142,
+        "code": "THA",
+        "name": "Thailand"
+    },
+    {
+        "id": 143,
+        "code": "TLA",
+        "name": "Latin America & the Caribbean (IDA & IBRD countries)"
+    },
+    {
+        "id": 144,
+        "code": "TMN",
+        "name": "Middle East & North Africa (IDA & IBRD countries)"
+    },
+    {
+        "id": 145,
+        "code": "TSA",
+        "name": "South Asia (IDA & IBRD)"
+    },
+    {
+        "id": 146,
+        "code": "TSS",
+        "name": "Sub-Saharan Africa (IDA & IBRD countries)"
+    },
+    {
+        "id": 147,
+        "code": "TTO",
+        "name": "Trinidad and Tobago"
+    },
+    {
+        "id": 148,
+        "code": "TUN",
+        "name": "Tunisia"
+    },
+    {
+        "id": 149,
+        "code": "TUR",
+        "name": "Turkey"
+    },
+    {
+        "id": 150,
+        "code": "TZA",
+        "name": "Tanzania"
+    },
+    {
+        "id": 151,
+        "code": "UMC",
+        "name": "Upper middle income"
+    },
+    {
+        "id": 152,
+        "code": "URY",
+        "name": "Uruguay"
+    },
+    {
+        "id": 153,
+        "code": "USA",
+        "name": "United States"
+    },
+    {
+        "id": 154,
+        "code": "VEN",
+        "name": "Venezuela, RB"
+    },
+    {
+        "id": 155,
+        "code": "VNM",
+        "name": "Vietnam"
+    },
+    {
+        "id": 156,
+        "code": "WLD",
+        "name": "World"
+    },
+    {
+        "id": 157,
+        "code": "YEM",
+        "name": "Yemen, Rep."
+    },
+    {
+        "id": 158,
+        "code": "ZAF",
+        "name": "South Africa"
+    },
+    {
+        "id": 159,
+        "code": "ZMB",
+        "name": "Zambia"
+    },
+    {
+        "id": 160,
+        "code": "ZWE",
+        "name": "Zimbabwe"
+    }
+]
