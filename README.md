@@ -25,3 +25,6 @@ Global warming is one of the critical reasons for climate change. The emission o
 ```pip install -r requirements.txt``` for window users
 ```pip3 install -r requirements.txt``` for mac/linux users <br>
 
+To run API type after installing all the dependencies<br>
+```uvicorn app.main:app --reload```
+
