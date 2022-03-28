@@ -8,18 +8,18 @@ from sklearn.model_selection import train_test_split
 import pickle
 from datetime import date
 import statistics
-from app.api.model import Features
+from backend.api.model import Features
 
 # Returns features list from local json
 def get_features():
-    features_filepath = "app/resources/features.json"
+    features_filepath = "backend/resources/features.json"
     features_stream = open(os.path.abspath(features_filepath), "r")
     features_list = json.load(features_stream)
     return features_list 
 
 # Returns countries list from local json
 def get_countries():
-    filepath = "app/resources/countries.json"
+    filepath = "backend/resources/countries.json"
     countries_list = open(os.path.abspath(filepath), "r")
     return json.load(countries_list)
 
