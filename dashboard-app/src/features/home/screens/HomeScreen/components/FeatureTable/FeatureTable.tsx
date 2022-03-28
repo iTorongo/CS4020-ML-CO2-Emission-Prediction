@@ -12,7 +12,7 @@ export enum UsersActionMenuEnum {
 
 const { Text } = Typography;
 
-const UsersTable = () => {
+const FeatureTable = () => {
   const [features, setFeatures] = useState<any>();
   const { predictionResults, loading } = useAppSelector(state => ({
     predictionResults: state.home.predictionResults,
@@ -183,4 +183,4 @@ const UsersTable = () => {
   );
 };
 
-export default UsersTable;
+export default FeatureTable;
