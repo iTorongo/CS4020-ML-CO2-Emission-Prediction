@@ -1,9 +1,18 @@
 @import "styles/colors";
 
 body {
-  background-color: $bg-gray;
+  background-color: $bg-gray-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ant-layout-header {
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem 0 rgb(44 51 73 / 10%);
+}
+
+.ant-menu-item-selected {
+  color: transparent!important;
 }
 
 /* Force ant input number to take up all width when used inside col */

@@ -1,6 +1,7 @@
 import { memo } from "react";
 
-import { Menu } from "antd";
+// import { Menu } from "antd";
+import { GithubOutlined } from "@ant-design/icons";
 
 const NavRightContent = memo(() => {
   // const dispatch = useAppDispatch();
@@ -14,17 +15,20 @@ const NavRightContent = memo(() => {
   // const userInitials = getInitials(name, 3);
 
   return (
-    <Menu mode="horizontal" theme="dark">
-      <Menu.SubMenu
-        key="user"
-        popupOffset={[-16, 7]}
-        // title={
-        //   <Avatar shape="square" style={{ backgroundColor: "#87d068" }} size={40}>
-        //     CO2
-        //   </Avatar>
-        // }
-      />
-    </Menu>
+    // <Menu mode="horizontal" >
+    //   <Menu.Item
+    //     key="user"
+    //   >
+    <a
+      href="https://github.com/iTorongo/CS4020-ML-CO2-Emission-Prediction"
+      target="_blank"
+      style={{ paddingRight: "24px", color: "#000" }}
+      rel="noreferrer"
+    >
+      <GithubOutlined style={{ fontSize: "24px" }} />
+    </a>
+    //   </Menu.Item>
+    // </Menu>
   );
 });
 

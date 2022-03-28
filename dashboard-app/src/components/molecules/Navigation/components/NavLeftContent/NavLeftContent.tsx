@@ -6,7 +6,7 @@ import cx from "classnames";
 
 // import logo from "@app/assets/images/co2.png";
 
-import NavMenu from "../NavMenu/NavMenu";
+// import NavMenu from "../NavMenu/NavMenu";
 import styles from "./NavLeftContent.module.scss";
 
 interface NavLeftContentProps {
@@ -28,7 +28,7 @@ const NavLeftContent = memo(({ mode = "horizontal" }: NavLeftContentProps) => {
           CO2
         </Avatar>
       </div>
-      <NavMenu mode={mode} isSidebar={isSidebar} />
+      {/* <NavMenu mode={mode} isSidebar={isSidebar} /> */}
     </>
   );
 });

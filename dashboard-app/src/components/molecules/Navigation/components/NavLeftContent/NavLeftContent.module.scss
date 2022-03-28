@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 $spacing-6;
+  margin: 0 $spacing-6; // changed 0 $spacing-6
 
   &.isSidebar {
     margin: $spacing-7;
