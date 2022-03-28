@@ -4,3 +4,22 @@ Dataset/
 co2_emission_rf.pkl
 app/__pycache__
 app/api/__pycache__
+
+
+/dashboard-app/node_modules
+
+/dashboard-app/.pnp
+/dashboard-app/.pnp.js
+
+# testing
+/dashboard-app/coverage
+
+# production
+/dashboard-app/build
+
+# misc
+/dashboard-app/.DS_Store
+/dashboard-app/.env.local
+/dashboard-app/.env.development.local
+/dashboard-app/.env.test.local
+/dashboard-app/.env.production.local
