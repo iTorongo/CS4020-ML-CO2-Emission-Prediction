@@ -40,3 +40,16 @@
   text-align: center;
   margin: $spacing-6 0;
 }
+
+.globalContainer {
+  text-align: center;
+  margin: $spacing-6 0; 
+   background-color: $bg-white;
+  padding: $spacing-4;
+  border: 0.0625rem solid #e4e9f2;
+  border-radius: 0.25rem;
+}
+
+.countryList {
+  text-align: left;
+}

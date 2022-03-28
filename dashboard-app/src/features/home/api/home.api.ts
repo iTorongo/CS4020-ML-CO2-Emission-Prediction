@@ -14,3 +14,9 @@ export const getPrediction = (params?: any): Promise<AxiosResponse<any>> => {
 export const getFeatures = (params?: any): Promise<AxiosResponse<any>> => {
   return api.get("/features", { params });
 };
+
+export const getGlobalPrediction = (
+  params?: any
+): Promise<AxiosResponse<any>> => {
+  return api.get("/global-prediction", { params });
+};

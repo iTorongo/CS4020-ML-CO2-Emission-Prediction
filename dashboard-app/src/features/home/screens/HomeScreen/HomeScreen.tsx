@@ -2,7 +2,7 @@
 import { useCallback, useEffect } from "react";
 
 import { AimOutlined } from "@ant-design/icons";
-import { Row, Col, Result, Button, Typography, List } from "antd";
+import { Row, Col, Result, Typography, List, Badge } from "antd";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,11 +22,12 @@ import ContentLayout from "@app/components/layouts/ContentLayout/ContentLayout";
 import useSearchParams from "@app/hooks/useSearchParams";
 import { useAppDispatch, useAppSelector } from "@app/redux/store";
 
-import { TopCountries } from "../../constants/home.paths";
+import { Countries, TopCountries } from "../../constants/home.paths";
 import {
   getCountries,
   getCountryWisePrediction,
   getPrediction,
+  getGlobalPrediction,
 } from "../../redux/home.slice";
 import styles from "./HomeScreen.module.scss";
 import FeatureTable from "./components/FeatureTable/FeatureTable";
@@ -51,14 +52,18 @@ const HomeScreen = () => {
     countries,
     predictionResults,
     topCountriesPrediction,
+    globalPrediction,
     features,
     loading,
+    loadingGlobal,
   } = useAppSelector(state => ({
     countries: state.home.countries,
     predictionResults: state.home.predictionResults,
     topCountriesPrediction: state.home.topCountriesPrediction,
+    globalPrediction: state.home.globalPrediction,
     features: Object.values(state.home.features),
     loading: state.home.loading,
+    loadingGlobal: state.home.loadingGlobal,
   }));
   const dispatch = useAppDispatch();
 
@@ -75,6 +80,7 @@ const HomeScreen = () => {
 
   useMount(() => {
     dispatch(getCountries());
+    dispatch(getGlobalPrediction());
   });
 
   useMount(() => {
@@ -110,6 +116,24 @@ const HomeScreen = () => {
       {
         label: "CO2 emissions (metric tons per capita)",
         data: predictionResults?.predictions?.map(
+          (prediction: any) => prediction.co2_per_capita
+        ),
+        borderColor: "rgba(24, 144, 255)",
+        backgroundColor: "rgba(24, 144, 255, 0.5)",
+        pointStyle: "circle",
+        pointRadius: 8,
+        pointHoverRadius: 12,
+        fill: true,
+      },
+    ],
+  };
+
+  const dataGlobalLineChart = {
+    labels: globalPrediction?.map((prediction: any) => prediction.year),
+    datasets: [
+      {
+        label: "CO2 emissions (metric tons per capita)",
+        data: globalPrediction?.map(
           (prediction: any) => prediction.co2_per_capita
         ),
         borderColor: "rgba(24, 144, 255)",
@@ -249,20 +273,35 @@ const HomeScreen = () => {
         </Row>
       </div>
 
+      <div className={styles.globalContainer}>
+        <Title level={3} className={styles.title}>
+          Global mean Predicted CO2 emissions (metric tons per capita) of Top 15
+          Countries
+        </Title>
+        <SpinWrapper loading={loadingGlobal}>
+          <Row justify="center" gutter={24}>
+            <Col span={14}>
+              <div className={styles.card}>
+                <Line options={lineOptions} data={dataGlobalLineChart} />
+              </div>
+            </Col>
+            <Col span={10}>
+              <div className={styles.countryList}>
+                {Countries.map(country => (
+                  <div key={country}>
+                    <Badge color="volcano" text={country} />
+                  </div>
+                ))}
+              </div>
+            </Col>
+          </Row>
+        </SpinWrapper>
+      </div>
+
       <div className={styles.predictionContainer}>
         <Row>
           <Col span={24}>
-            <Result
-              status="success"
-              title="Successfully Purchased Cloud Server ECS!"
-              subTitle="r configuration takes 1-5 minutes, please wait."
-              extra={[
-                <Button type="primary" key="console">
-                  Go Console
-                </Button>,
-                <Button key="buy">Buy Again</Button>,
-              ]}
-            />
+            <Result status="success" />
           </Col>
         </Row>
       </div>

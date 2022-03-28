@@ -1,6 +1,5 @@
 import { memo } from "react";
 
-import { GlobalOutlined } from "@ant-design/icons";
 import { Avatar } from "antd";
 import { MenuProps } from "antd/lib/menu";
 import cx from "classnames";
@@ -25,11 +24,9 @@ const NavLeftContent = memo(({ mode = "horizontal" }: NavLeftContentProps) => {
         })}
       >
         {/* <img className={styles.logo} src={logo} alt="logo" /> */}
-        <Avatar
-          style={{ backgroundColor: "#87d068" }}
-          size={50}
-          icon={<GlobalOutlined />}
-        />
+        <Avatar style={{ backgroundColor: "#87d068" }} size={50}>
+          CO2
+        </Avatar>
       </div>
       <NavMenu mode={mode} isSidebar={isSidebar} />
     </>

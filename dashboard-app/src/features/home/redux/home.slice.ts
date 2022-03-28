@@ -9,8 +9,11 @@ interface SliceState {
   countries: any[];
   predictionResults: any;
   topCountriesPrediction: any;
+  globalPrediction: any;
   features: any;
   loading: boolean;
+  loadingCountriesResult: boolean;
+  loadingGlobal: boolean;
   error: string | undefined | null;
 }
 
@@ -18,6 +21,7 @@ const initialState: SliceState = {
   countries: [],
   predictionResults: [],
   topCountriesPrediction: [],
+  globalPrediction: [],
   features: {
     ALT_NUCL_EN_PERC: "Alternative and nuclear energy (% of total energy use)",
     AIR_TRANS_FREIGHT: "Air transport, freight (million ton-km)",
@@ -42,6 +46,8 @@ const initialState: SliceState = {
   },
 
   loading: false,
+  loadingCountriesResult: false,
+  loadingGlobal: false,
   error: null,
 };
 
@@ -64,6 +70,15 @@ export const getCountryWisePrediction = createAsyncThunk(
   // eslint-disable-next-line camelcase
   async (params: { year: string; country_id: string }) => {
     const response = await homeApi.getPrediction(params);
+    return response.data;
+  }
+);
+
+export const getGlobalPrediction = createAsyncThunk(
+  "home/getGlobalPrediction",
+  // eslint-disable-next-line camelcase
+  async () => {
+    const response = await homeApi.getGlobalPrediction();
     return response.data;
   }
 );
@@ -101,11 +116,11 @@ const homeSlice = createSlice({
     });
     /** GET Prediction */
     builder.addCase(getCountryWisePrediction.pending, state => {
-      state.loading = true;
+      state.loadingCountriesResult = true;
       state.error = null;
     });
     builder.addCase(getCountryWisePrediction.fulfilled, (state, action) => {
-      state.loading = false;
+      state.loadingCountriesResult = false;
       const isFound = state.topCountriesPrediction.find(
         (pred: any) => pred.country_id === action.payload.country_id
       );
@@ -114,7 +129,20 @@ const homeSlice = createSlice({
       }
     });
     builder.addCase(getCountryWisePrediction.rejected, (state, action) => {
-      state.loading = false;
+      state.loadingCountriesResult = false;
+      state.error = action.error.message;
+    });
+    /** GET global */
+    builder.addCase(getGlobalPrediction.pending, state => {
+      state.loadingGlobal = true;
+      state.error = null;
+    });
+    builder.addCase(getGlobalPrediction.fulfilled, (state, action) => {
+      state.loadingGlobal = false;
+      state.globalPrediction = action.payload;
+    });
+    builder.addCase(getGlobalPrediction.rejected, (state, action) => {
+      state.loadingGlobal = false;
       state.error = action.error.message;
     });
   },

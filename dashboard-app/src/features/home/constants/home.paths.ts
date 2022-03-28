@@ -28,3 +28,21 @@ export const TopCountries = [
     name: "South Korea",
   },
 ];
+
+export const Countries = [
+  "China",
+  "United States",
+  "India",
+  "Russia",
+  "Japan",
+  "Iran",
+  "Germany",
+  "Saudi Arab",
+  "Indonesia",
+  "Canada",
+  "South Africa",
+  "Brazil",
+  "Australia",
+  "United Kingdom",
+  "France",
+];
