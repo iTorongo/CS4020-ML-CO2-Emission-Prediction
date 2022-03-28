@@ -50,6 +50,10 @@ async def getPrediction(country_id: int = 153, year: int = 2030):
     # Filter data based on selected country
     selected_country_data = data.loc[(data['CountryCode'] == int(country_id))]
 
+    features_filepath = "app/resources/features.json"
+    features_stream = open(os.path.abspath(features_filepath), "r")
+    features_list = json.load(features_stream)
+
     features = [ 
         'ALT_NUCL_EN_PERC',
         'AIR_TRANS_FREIGHT',
@@ -79,6 +83,7 @@ async def getPrediction(country_id: int = 153, year: int = 2030):
     for year in years:
         # Declare empty list
         year_data = [country_id]
+        features_data = []
         # Iterate through features
         for feature in features:
             # split the dataset with 20% test data 
@@ -86,12 +91,18 @@ async def getPrediction(country_id: int = 153, year: int = 2030):
             reg = LinearRegression()                  # start the clasifier
             reg.fit(X_train,y_train)                  # fit the model       
             predictions = reg.predict([[year]])
+            features_data.append({
+                "feature_code": feature,
+                "feature_name": features_list[feature],
+                "value": predictions[0][0]
+            })
             year_data.append(predictions[0][0])
         prediction_data.append({
             "year": year,
+            "features": features_data,
             "co2_per_capita": model.predict([year_data])[0]
         })
     return {
         "country_id": country_id,
-        "predections": prediction_data
+        "predictions": prediction_data
     }

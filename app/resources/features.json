@@ -1,0 +1,19 @@
+{
+  "ALT_NUCL_EN_PERC": "Alternative and nuclear energy (% of total energy use)",
+  "AIR_TRANS_FREIGHT": "Air transport, freight (million ton-km)",
+  "COMB_REN_WASTE_PERC": "Combustible renewables and waste (% of total energy)",
+  "ELEC_PROD_COAL_PERC": "Electricity production from coal sources (% of total)",
+  "ELEC_PROD_HYDRO_PERC": "Electricity production from hydroelectric sources (% of total)",
+  "ELEC_PROD_NAT_GAS_PERC": "Electricity production from natural gas sources (% of total)",
+  "ELEC_PROD_OIL_PERC": "Electricity production from oil sources (% of total)",
+  "ELEC_PROD_RENW_SRC_PERC": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+  "EN_USE_PC": "Energy use (kg of oil equivalent per capita)",
+  "FOSSIL_FUEL_EN_CONS_PERC": "Fossil fuel energy consumption (% of total)",
+  "GDP_PC": "GDP per capita (current US$)",
+  "POP_GROWTH_PERC": "Population growth (annual %)",
+  "POP_URBAN_AGG": "Population in urban agglomerations of more than 1 million (% of total population)",
+  "URBAN_POP_TOTAL": "Urban population (% of total population)",
+  "URBAN_POP_GROWTH": "Urban population growth (annual %)",
+  "METHANE_EM": "Methane emissions (kt of CO2 equivalent)",
+  "NO2_EM": "Nitrous oxide emissions (thousand metric tons of CO2 equivalent)"
+}
