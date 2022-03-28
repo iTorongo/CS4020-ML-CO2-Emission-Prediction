@@ -106,7 +106,7 @@ def get_global_prediction(year: int = 2030):
     choosen_countries = []
     countries = get_countries()
     # Selected countries for global predicition
-    choosen_country_codes = ['CHN','USA', 'IND', 'RUS', 'JPN', 'IRN' 'DEU', 'SAU', 'IDN', 'CAN', 'ZAF' 'BRA', 'AUS', 'GBR', 'FRA', 'NOR', 'SWE', 'BGD', 'ARE','COL', 'PAK', 'VNM', 'POL']
+    choosen_country_codes = ['CHN','USA', 'IND', 'RUS', 'JPN', 'IRN' 'DEU', 'SAU', 'IDN', 'CAN', 'ZAF' 'BRA', 'AUS', 'GBR', 'FRA']
 
     for country in choosen_country_codes:
         for country_entity in countries:
