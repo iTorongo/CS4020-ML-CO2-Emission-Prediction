@@ -6,7 +6,6 @@
   "ELEC_PROD_HYDRO_PERC": "Electricity production from hydroelectric sources (% of total)",
   "ELEC_PROD_NAT_GAS_PERC": "Electricity production from natural gas sources (% of total)",
   "ELEC_PROD_OIL_PERC": "Electricity production from oil sources (% of total)",
-  "ELEC_PROD_RENW_SRC_PERC": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
   "EN_USE_PC": "Energy use (kg of oil equivalent per capita)",
   "FOSSIL_FUEL_EN_CONS_PERC": "Fossil fuel energy consumption (% of total)",
   "GDP_PC": "GDP per capita (current US$)",
