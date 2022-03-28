@@ -6,20 +6,20 @@ backend/__pycache__
 backend/api/__pycache__
 
 
-/dashboard-app/node_modules
+/frontend/node_modules
 
-/dashboard-app/.pnp
-/dashboard-app/.pnp.js
+/frontend/.pnp
+/frontend/.pnp.js
 
 # testing
-/dashboard-app/coverage
+/frontend/coverage
 
 # production
-/dashboard-app/build
+/frontend/build
 
 # misc
-/dashboard-app/.DS_Store
-/dashboard-app/.env.local
-/dashboard-app/.env.development.local
-/dashboard-app/.env.test.local
-/dashboard-app/.env.production.local
+/frontend/.DS_Store
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
