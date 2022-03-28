@@ -37,7 +37,7 @@ async def getPrediction(country_id: int = 153, year: int = 2030):
     return api.get_prediction(country_id, year)
 
 # Get manual prediction from user input
-@app.get("/api/v1/prediction-manual")
+@app.post("/api/v1/prediction-manual")
 async def getManualPrediction(input_features: Features):
     return api.get_manual_prediction(input_features)
 
