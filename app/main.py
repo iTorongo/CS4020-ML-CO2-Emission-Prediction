@@ -1,3 +1,4 @@
+from pyexpat import features
 from fastapi import FastAPI
 import json
 import os
@@ -9,6 +10,7 @@ import pickle
 from datetime import date
 from starlette.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import statistics
 
 class Features(BaseModel):
     country_id: float
@@ -72,7 +74,6 @@ async def getPrediction(country_id: int = 153, year: int = 2030):
     features_filepath = "app/resources/features.json"
     features_stream = open(os.path.abspath(features_filepath), "r")
     features_list = json.load(features_stream)
-
     features = list(features_list.keys())
 
     # creating the date object of today's date
@@ -126,3 +127,71 @@ async def getManualPrediction(input_features: Features):
     return {
         "co2_per_capita": prediction
     }
+
+@app.get("/api/v1/global-prediction")
+async def getGlobalPrediction(year: int = 2030):
+
+    # read the csv
+    filepath = "data_preprocessed.csv"
+    data = pd.read_csv(os.path.abspath(filepath))
+
+    # load the model from disk
+    model_name = "co2_emission_rf.pkl"
+    model_path = os.path.abspath(model_name)
+    model = pickle.load(open(model_path, 'rb'))
+
+    # load features from json
+    features_filepath = "app/resources/features.json"
+    features_stream = open(os.path.abspath(features_filepath), "r")
+    features_list = json.load(features_stream)
+    features = list(features_list.keys())
+
+    # get year range
+    # creating the date object of today's date
+    todays_date = date.today()
+
+    years = list(range(int(todays_date.year), int(year)+1))
+
+    # get countries
+    choosen_countries = []
+    countries = getCountries()
+    choosen_country_codes = ['CHN','USA', 'IND', 'RUS', 'JPN', 'IRN' 'DEU', 'SAU', 'IDN', 'CAN', 'ZAF' 'BRA', 'AUS', 'GBR', 'FRA', 'NOR', 'SWE', 'BGD', 'ARE','COL', 'PAK', 'VNM', 'POL']
+
+    for country in choosen_country_codes:
+        for country_entity in countries:
+            if country_entity['code'] == country:
+                choosen_countries.append(country_entity)
+
+
+    # 1: Loop through years
+    # 2: Get all countries data for that year
+    # 3: Get mean value
+
+    year_data = []
+    for year in years:
+        country_data = []
+        for country in choosen_countries:
+            country_id = int(country['id'])
+
+            feature_data = [country_id]
+
+            selected_country_data = data.loc[(data['CountryCode'] == country_id)]
+
+            for feature in features:
+                # split the dataset with 20% test data 
+                X_train,X_test,y_train,y_test = train_test_split(selected_country_data['Year'].values.reshape(-1, 1),selected_country_data[[feature]].values,test_size= 0.2)
+                reg = LinearRegression()                  # start the clasifier
+                reg.fit(X_train,y_train)                  # fit the model       
+                predictions = reg.predict([[year]])
+                feature_data.append(predictions)
+
+            country_prediction = model.predict([feature_data])[0]
+            country_data.append(country_prediction)
+
+        year_value = {
+            "year": year,
+            "co2_per_capita": statistics.mean(country_data)
+        }
+        year_data.append(year_value)
+
+    return year_data
