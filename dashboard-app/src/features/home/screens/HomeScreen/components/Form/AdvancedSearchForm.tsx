@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Form, Row, Col, Input, Button, Select, Card, Statistic } from "antd";
 
 import SpinWrapper from "@app/components/atoms/SpinWrapper/SpinWrapper";
@@ -47,7 +48,6 @@ const AdvancedSearchForm = () => {
   };
 
   const onFinish = (values: any) => {
-    console.log(values);
     dispatch(getManualPrediction(values));
   };
 
