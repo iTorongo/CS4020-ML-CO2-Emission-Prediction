@@ -37,14 +37,14 @@ def get_prediction(country_id: int = 153, year: int = 2030):
     years = get_year_range(year)
 
     # Filter data based on selected country
-    selected_country_data = data.loc[(data['CountryCode'] == int(country_id))]
+    selected_country_data = data.loc[(data['CountryCode'] == (int(country_id) - 1))]
 
     prediction_data = []
 
     # Iterate through years
     for year in years:
         # Declare empty list
-        year_data = [country_id]
+        year_data = [country_id-1]
         features_data = []
         # Iterate through features
         for feature in features_list:
@@ -117,7 +117,7 @@ def get_global_prediction(year: int = 2030):
     for year in years:
         country_data = []
         for country in choosen_countries:
-            country_id = int(country['id'])
+            country_id = int(country['id']) - 1
 
             feature_data = [country_id]
 
