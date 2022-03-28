@@ -10,10 +10,12 @@ interface SliceState {
   predictionResults: any;
   topCountriesPrediction: any;
   globalPrediction: any;
+  manualPrediction: any;
   features: any;
   loading: boolean;
   loadingCountriesResult: boolean;
   loadingGlobal: boolean;
+  loadingManual: boolean;
   error: string | undefined | null;
 }
 
@@ -22,6 +24,7 @@ const initialState: SliceState = {
   predictionResults: [],
   topCountriesPrediction: [],
   globalPrediction: [],
+  manualPrediction: null,
   features: {
     ALT_NUCL_EN_PERC: "Alternative and nuclear energy (% of total energy use)",
     AIR_TRANS_FREIGHT: "Air transport, freight (million ton-km)",
@@ -48,6 +51,7 @@ const initialState: SliceState = {
   loading: false,
   loadingCountriesResult: false,
   loadingGlobal: false,
+  loadingManual: false,
   error: null,
 };
 
@@ -79,6 +83,14 @@ export const getGlobalPrediction = createAsyncThunk(
   // eslint-disable-next-line camelcase
   async () => {
     const response = await homeApi.getGlobalPrediction();
+    return response.data;
+  }
+);
+
+export const getManualPrediction = createAsyncThunk(
+  `home/getManualPrediction`,
+  async (values: any) => {
+    const response = await homeApi.getManualPrediction(values);
     return response.data;
   }
 );
@@ -143,6 +155,20 @@ const homeSlice = createSlice({
     });
     builder.addCase(getGlobalPrediction.rejected, (state, action) => {
       state.loadingGlobal = false;
+      state.error = action.error.message;
+    });
+
+    /** Post manual prediction */
+    builder.addCase(getManualPrediction.pending, state => {
+      state.error = null;
+      state.loadingManual = true;
+    });
+    builder.addCase(getManualPrediction.fulfilled, (state, action) => {
+      state.loadingManual = false;
+      state.manualPrediction = action.payload;
+    });
+    builder.addCase(getManualPrediction.rejected, (state, action) => {
+      state.loadingManual = false;
       state.error = action.error.message;
     });
   },

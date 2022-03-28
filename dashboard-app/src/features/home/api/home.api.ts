@@ -20,3 +20,7 @@ export const getGlobalPrediction = (
 ): Promise<AxiosResponse<any>> => {
   return api.get("/global-prediction", { params });
 };
+
+export const getManualPrediction = (data: any): Promise<AxiosResponse<any>> => {
+  return api.post("/prediction-manual", data);
+};

@@ -50,7 +50,7 @@ const Filter = () => {
         </Select>
       </FilterItem>
       <FilterItem
-        label="Select Year Range"
+        label="Select Year Range (2022-2030)"
         name="year"
         className={styles.slider}
       >

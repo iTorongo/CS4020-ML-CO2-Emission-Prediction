@@ -1,32 +1,25 @@
 @import "styles/colors";
 @import "styles/variables";
 
-.chartContainer {
-  text-align: center;
-  margin-bottom: $spacing-6;
-  padding: $spacing-4;
+
+.title {
+  margin-bottom: $spacing-6 !important;
 }
 
 .card {
   padding: $spacing-4;
   background-color: $bg-white;
-  border: 0.0625rem solid #e4e9f2;
+  border: 1px solid #e4e9f2;
   border-radius: 0.25rem;
 }
 
-.featureContainer {
-  text-align: center;
-}
-
-.predictionContainer {
-  background-color: $bg-white;
-  padding: $spacing-4;
-  border: 0.0625rem solid #e4e9f2;
-  border-radius: 0.25rem;
+.chartContainer {
+  margin-top: $spacing-2;
+  margin-bottom: $spacing-6;
 }
 
 .listContent {
-  max-height: 400px;
+  max-height: 450px;
   overflow: auto;
   border-top: 1px solid #e4e9f2;
 }
@@ -36,20 +29,41 @@
   align-items: center;
 }
 
-.countriesContainer {
-  text-align: center;
-  margin: $spacing-6 0;
+.featureContainer {
+  // text-align: center;
 }
 
-.globalContainer {
-  text-align: center;
-  margin: $spacing-6 0; 
-   background-color: $bg-white;
+.countriesContainer {
+  margin: $spacing-6 0;
+  background-color: $bg-white;
   padding: $spacing-4;
-  border: 0.0625rem solid #e4e9f2;
+  border: 1px  solid #e4e9f2;
   border-radius: 0.25rem;
 }
 
-.countryList {
-  text-align: left;
+.globalContainer {
+  margin: $spacing-6 0; 
+   background-color: $bg-white;
+  padding: $spacing-4;
+  border: 1px  solid #e4e9f2;
+  border-radius: 0.25rem;
+
+  .countryList {
+    text-align: left;
+  }
+  
+}
+
+
+.predictionContainer {
+  background-color: $bg-white;
+  padding: $spacing-4;
+  border: 1px solid #e4e9f2;
+  border-radius: 0.25rem;
+}
+
+
+.predictionResult {
+  margin: 16px;
+  text-align: center;
 }

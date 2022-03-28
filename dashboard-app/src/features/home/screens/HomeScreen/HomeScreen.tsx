@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCallback, useEffect } from "react";
 
-import { AimOutlined } from "@ant-design/icons";
-import { Row, Col, Result, Typography, List, Badge } from "antd";
+import { RightCircleOutlined } from "@ant-design/icons";
+import { Row, Col, Typography, List, Badge } from "antd";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -32,6 +32,7 @@ import {
 import styles from "./HomeScreen.module.scss";
 import FeatureTable from "./components/FeatureTable/FeatureTable";
 import Filter from "./components/Filter/Filter";
+import AdvancedSearchForm from "./components/Form/AdvancedSearchForm";
 
 ChartJS.register(
   CategoryScale,
@@ -67,6 +68,10 @@ const HomeScreen = () => {
   }));
   const dispatch = useAppDispatch();
 
+  useMount(() => {
+    dispatch(getCountries());
+  });
+
   const fetchData = useCallback(() => {
     dispatch(
       getPrediction({ year: search?.year, country_id: search?.country_id })
@@ -79,7 +84,6 @@ const HomeScreen = () => {
   }, [fetchData]);
 
   useMount(() => {
-    dispatch(getCountries());
     dispatch(getGlobalPrediction());
   });
 
@@ -206,13 +210,14 @@ const HomeScreen = () => {
       filters={<Filter />}
     >
       <div className={styles.chartContainer}>
-        <Title level={3} className={styles.title}>
-          Predicted CO2 emissions (metric tons per capita) of {getCountryName()}
-        </Title>
         <SpinWrapper loading={loading}>
           <Row justify="center" gutter={24}>
             <Col span={12}>
               <div className={styles.card}>
+                <Title level={3} className={styles.title}>
+                  Predicted CO2 emissions (metric tons per capita) of{" "}
+                  {getCountryName()}
+                </Title>
                 <Line options={lineOptions} data={dataLineChart} />
               </div>
             </Col>
@@ -228,7 +233,7 @@ const HomeScreen = () => {
                     renderItem={(item: any) => (
                       <List.Item>
                         <div className={styles.listItem}>
-                          <AimOutlined
+                          <RightCircleOutlined
                             style={{
                               fontSize: "20px",
                               color: "#08c",
@@ -248,13 +253,14 @@ const HomeScreen = () => {
       </div>
 
       <div className={styles.featureContainer}>
-        <Title level={3} className={styles.title}>
-          Used Feature Variables for the Prediction of {getCountryName()}
-        </Title>
         <SpinWrapper loading={loading}>
           <Row justify="center" gutter={24}>
             <Col span={24}>
               <div className={styles.card}>
+                <Title level={3} className={styles.title}>
+                  Used Feature Variables for the Prediction of{" "}
+                  {getCountryName()}
+                </Title>
                 <FeatureTable />
               </div>
             </Col>
@@ -264,7 +270,7 @@ const HomeScreen = () => {
 
       <div className={styles.countriesContainer}>
         <Title level={3} className={styles.title}>
-          Predicted CO2 emissions (metric tons per capita) of Top 6 Countries
+          Predicted CO2 Emissions (metric tons per capita) of Top 6 Countries
         </Title>
         <Row justify="center" gutter={[16, 16]}>
           {topCountriesPrediction.map((prediction: any) =>
@@ -275,7 +281,7 @@ const HomeScreen = () => {
 
       <div className={styles.globalContainer}>
         <Title level={3} className={styles.title}>
-          Global mean Predicted CO2 emissions (metric tons per capita) of Top 15
+          Global Mean Predicted CO2 Emissions (metric tons per capita) of Top 15
           Countries
         </Title>
         <SpinWrapper loading={loadingGlobal}>
@@ -299,9 +305,12 @@ const HomeScreen = () => {
       </div>
 
       <div className={styles.predictionContainer}>
+        <Title level={3} className={styles.title}>
+          CO2 Emission (per capita) Prediction (Advanced)
+        </Title>
         <Row>
           <Col span={24}>
-            <Result status="success" />
+            <AdvancedSearchForm />
           </Col>
         </Row>
       </div>

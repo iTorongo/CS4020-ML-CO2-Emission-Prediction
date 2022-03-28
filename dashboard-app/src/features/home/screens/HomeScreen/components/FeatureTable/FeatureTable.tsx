@@ -69,16 +69,16 @@ const FeatureTable = () => {
         fixed="left"
       />
       <Table.Column
-        title="Air transport, freight (million ton-km)"
-        key="AIR_TRANS_FREIGHT"
-        dataIndex="AIR_TRANS_FREIGHT"
-        render={(AIR_TRANS_FREIGHT: any) => AIR_TRANS_FREIGHT.value}
-      />
-      <Table.Column
         title="Alternative and nuclear energy (% of total energy use)"
         key="ALT_NUCL_EN_PERC"
         dataIndex="ALT_NUCL_EN_PERC"
         render={(ALT_NUCL_EN_PERC: any) => ALT_NUCL_EN_PERC.value}
+      />
+      <Table.Column
+        title="Air transport, freight (million ton-km)"
+        key="AIR_TRANS_FREIGHT"
+        dataIndex="AIR_TRANS_FREIGHT"
+        render={(AIR_TRANS_FREIGHT: any) => AIR_TRANS_FREIGHT.value}
       />
       <Table.Column
         title="Combustible renewables and waste (% of total energy)"
@@ -173,7 +173,7 @@ const FeatureTable = () => {
         dataIndex="co2"
         render={(co2: any) => (
           <Text type="danger" strong>
-            {co2}
+            {co2?.toFixed(5)}
           </Text>
         )}
         fixed="right"
