@@ -36,7 +36,7 @@ Global warming is one of the critical reasons for climate change. The emission o
 
  ### Run API server and dashboard
  
-1. It is mandator to have [docker](https://www.docker.com/) installed in the machine.
+1. It is mandatory to have [docker](https://www.docker.com/) installed in the machine.
 2. Run `docker-compose build && docker-compose up -d` to start the full development stack. This will eventually run the API server and dashboard on docker container
 3. The above command will take some time depending on machine performance. After completing go to `http://localhost:3000` and see the dashboard.
 4. To stop docker at the end run `docker-compose down`
