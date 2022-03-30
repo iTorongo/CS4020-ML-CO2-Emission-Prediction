@@ -4,7 +4,7 @@ dataset/original/
 model/
 backend/__pycache__
 backend/api/__pycache__
-
+backend/resources/co2_emission_rf.pkl
 
 /frontend/node_modules
 

@@ -8,18 +8,18 @@ from sklearn.model_selection import train_test_split
 import pickle
 from datetime import date
 import statistics
-from backend.api.model import Features
+from api.model import Features
 
 # Returns features list from local json
 def get_features():
-    features_filepath = "backend/resources/features.json"
+    features_filepath = "resources/features.json"
     features_stream = open(os.path.abspath(features_filepath), "r")
     features_list = json.load(features_stream)
     return features_list 
 
 # Returns countries list from local json
 def get_countries():
-    filepath = "backend/resources/countries.json"
+    filepath = "resources/countries.json"
     countries_list = open(os.path.abspath(filepath), "r")
     return json.load(countries_list)
 
@@ -147,7 +147,7 @@ def get_global_prediction(year: int = 2030):
 # Returns final ML model
 def get_ml_model():
     # load the model from disk
-    model_name = "./model/co2_emission_rf.pkl"
+    model_name = "resources/co2_emission_rf.pkl"
     model_path = os.path.abspath(model_name)
     model = pickle.load(open(model_path, 'rb'))
     return model
@@ -155,7 +155,7 @@ def get_ml_model():
 # Returns dataframe from preprocessed csv file
 def get_data_csv():
     # Read the csv
-    filepath = "./dataset/processed/data_preprocessed.csv"
+    filepath = "resources/data_preprocessed.csv"
     data = pd.read_csv(os.path.abspath(filepath))
     return data
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-from backend.api import api
-from backend.api.model import Features
+from api import api
+from api.model import Features
 
 # Initialise FastAPI app
 app = FastAPI()
@@ -33,7 +33,7 @@ def getCountries():
 
 # Get countrywise prediction
 @app.get("/api/v1/prediction")
-async def getPrediction(country_id: int = 153, year: int = 2032):
+async def getPrediction(country_id: int = 153, year: int = 2030):
     return api.get_prediction(country_id, year)
 
 # Get manual prediction from user input
@@ -43,5 +43,5 @@ async def getManualPrediction(input_features: Features):
 
 # Get global prediction based on selected countries co2 per capita
 @app.get("/api/v1/global-prediction")
-async def getGlobalPrediction(year: int = 2032):
+async def getGlobalPrediction(year: int = 2030):
     return api.get_global_prediction(year)
