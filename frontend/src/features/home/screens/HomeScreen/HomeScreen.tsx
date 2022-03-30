@@ -270,7 +270,8 @@ const HomeScreen = () => {
 
       <div className={styles.countriesContainer}>
         <Title level={3} className={styles.title}>
-          Predicted CO<sub>2</sub> Emissions (metric tons per capita) of Top 6 Countries
+          Predicted CO<sub>2</sub> Emissions (metric tons per capita) of Top 6
+          Countries
         </Title>
         <Row justify="center" gutter={[16, 16]}>
           {topCountriesPrediction.map((prediction: any) =>
@@ -281,8 +282,8 @@ const HomeScreen = () => {
 
       <div className={styles.globalContainer}>
         <Title level={3} className={styles.title}>
-          Global Mean Predicted CO<sub>2</sub> Emissions (metric tons per capita) of Top 15
-          Countries
+          Global Mean Predicted CO<sub>2</sub> Emissions (metric tons per
+          capita) of Top 15 Countries
         </Title>
         <SpinWrapper loading={loadingGlobal}>
           <Row justify="center" gutter={24}>
@@ -306,7 +307,7 @@ const HomeScreen = () => {
 
       <div className={styles.predictionContainer}>
         <Title level={3} className={styles.title}>
-        CO<sub>2</sub> Emission (per capita) Prediction (Advanced)
+          CO<sub>2</sub> Emission (per capita) Prediction (Advanced)
         </Title>
         <Row>
           <Col span={24}>

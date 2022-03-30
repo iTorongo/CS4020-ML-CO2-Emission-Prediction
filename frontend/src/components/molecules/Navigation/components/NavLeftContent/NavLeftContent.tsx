@@ -25,7 +25,7 @@ const NavLeftContent = memo(({ mode = "horizontal" }: NavLeftContentProps) => {
       >
         {/* <img className={styles.logo} src={logo} alt="logo" /> */}
         <Avatar style={{ backgroundColor: "#87d068" }} size={50}>
-        CO<sub>2</sub>
+          CO<sub>2</sub>
         </Avatar>
       </div>
       {/* <NavMenu mode={mode} isSidebar={isSidebar} /> */}
