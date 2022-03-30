@@ -147,7 +147,7 @@ def get_global_prediction(year: int = 2030):
 # Returns final ML model
 def get_ml_model():
     # load the model from disk
-    model_name = "co2_emission_rf.pkl"
+    model_name = "./model/co2_emission_rf.pkl"
     model_path = os.path.abspath(model_name)
     model = pickle.load(open(model_path, 'rb'))
     return model
@@ -155,7 +155,7 @@ def get_ml_model():
 # Returns dataframe from preprocessed csv file
 def get_data_csv():
     # Read the csv
-    filepath = "data_preprocessed.csv"
+    filepath = "./dataset/processed/data_preprocessed.csv"
     data = pd.read_csv(os.path.abspath(filepath))
     return data
 
