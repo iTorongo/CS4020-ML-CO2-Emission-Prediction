@@ -6,25 +6,42 @@ This repository has been made as a part of the final project assignment of USN D
 
 Global warming is one of the critical reasons for climate change. The emission of Carbon dioxide (CO2) by humans is one of many reasons for global warming. If necessary measures are not taken in time, this will cause a devastating impact throughout the world. This project aims to provide a more comprehensive range of country wise CO2 predictions analyzing the time series dataset and applying several machine learning algorithms and techniques.
 
-## Installation
- 1 - Clone this repository in your current working directory <br>
- ```git clone https://github.com/iTorongo/CS4020-ML-CO2-Emission-Prediction```
 
- 2 - Go to the directory named CS4020-ML-CO2-Emission-Prediction <br>
+## Setup development environment
+
+ 1. It is mandator to have [docker](https://www.docker.com/) installed in the machine.
+
+ 2. Download the project and unzip it
+
+ 3. Go to the directory named CS4020-ML-CO2-Emission-Prediction <br>
  ```cd CS4020-ML-CO2-Emission-Prediction```
+ 
+ [NB: To run jupyter lab or API server and dashboard are independent tasks. Either can be run independently by following the below steps]
 
- 3 - Create a virtual environment <br>
- ```python -m venv venv``` for window users <br>
-```python3 -m venv venv```for mac and linux users <br>
+ ### Create virtual environment and run jupyter lab
 
-4 - Activate your virtual environment <br>
-```Scripts\activate```for window users 
-```source venv/bin/activate``` for mac/linux users <br>
+ 1. Create a virtual environment <br>
+ ```python -m venv venv``` for window <br>
+```python3 -m venv venv```for mac and linux <br>
 
-5 - Install requirements <br>
-```pip install -r requirements.txt``` for window users
-```pip3 install -r requirements.txt``` for mac/linux users <br>
+2. Activate virtual environment <br>
+```Scripts\activate```for window <br>
+```source venv/bin/activate``` for mac and linux <br>
 
-To run API type after installing all the dependencies<br>
-```uvicorn app.main:app --reload```
+3. Install requirements <br>
+```pip install -r requirements.txt``` for window <br>
+```pip3 install -r requirements.txt``` for mac and linux <br>
+
+4. Run Jupyter Lab type <br>
+```jupyter lab```
+
+
+ ### Run API server and dashboard
+
+1. Run `docker-compose build && docker-compose up -d` to start the full development stack. This will eventually run the API server and dashboard on docker container
+2. The above command will take some time depending on machine performance. After completing go to `http://localhost:3000` and see the dashboard.
+3. To stop docker at the end run `docker-compose down`
+
+
+
 
