@@ -50,11 +50,11 @@ const Filter = () => {
         </Select>
       </FilterItem>
       <FilterItem
-        label="Select Year Range (2022-2030)"
+        label="Select Year Range (2022-2032)"
         name="year"
         className={styles.slider}
       >
-        <Slider min={2022} max={2030} defaultValue={2030} tooltipVisible />
+        <Slider min={2022} max={2032} defaultValue={2032} tooltipVisible />
       </FilterItem>
     </PageFilter>
   );
