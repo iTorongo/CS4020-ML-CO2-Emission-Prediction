@@ -8,11 +8,11 @@ Global warming is one of the critical reasons for climate change. The emission o
 
 
 ## Setup development environment
+ 
+  1. Clone this repository in your current working directory <br>
+ ```git clone https://github.com/iTorongo/CS4020-ML-CO2-Emission-Prediction```
 
- 1. Download the project and unzip it
-
- 2. Go to the directory named CS4020-ML-CO2-Emission-Prediction <br>
- ```cd CS4020-ML-CO2-Emission-Prediction```
+ 2. Go to the directory named `CS4020-ML-CO2-Emission-Prediction` <br>
  
  [NB: To run jupyter lab or API server and dashboard are independent tasks. Either can be run independently by following the below steps]
 
